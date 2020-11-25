@@ -39,17 +39,25 @@ return courseName;
 
 
 //get method for module name
-public List<String> getModuleList() {
-return Modules;
+public String getModuleList() {
+return Modules.toString();
 }
 
 
 //get method for list of students
-public List<String> getStudentList() {
-return Students;
+public String getStudentList() {
+return Modules.toString();
 }
 
+// add modules and students
 
+public void addStudent(String s) {
+	Students.add(s);
+}
+
+public void addModules(String m) {
+	Modules.add(m);
+}
 //set and get methods for start date
 public void setStartDate(String startDate) {
 	start = DateTime.parse(startDate, DateTimeFormat.forPattern("dd/MM/yyyy HH:mm:ss"));

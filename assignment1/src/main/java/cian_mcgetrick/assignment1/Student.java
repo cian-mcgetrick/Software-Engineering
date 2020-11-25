@@ -66,8 +66,8 @@ public class Student {
 		return modules;
 	}
 
-	public void setModules(List<String> modules) {
-		this.modules = modules;
+	public void addModules(String m) {
+		modules.add(m);
 	}
 
 	

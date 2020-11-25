@@ -38,23 +38,23 @@ public class Module {
 	}
 
 
-	public List<String> getStudents() {
-		return students;
+	public String getStudents() {
+		return students.toString();
 	}
 
 
-	public void setStudents(List<String> students) {
-		this.students = students;
+	public void addStudents(String s) {
+		students.add(s);
 	}
 
 
-	public List<String> getModCourses() {
-		return modCourses;
+	public String getModCourses() {
+		return modCourses.toString();
 	}
 
 
-	public void setModCourses(List<String> modCourses) {
-		this.modCourses = modCourses;
+	public void addModCourses(String c) {
+		modCourses.add(c);
 	}
 
 
