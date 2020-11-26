@@ -5,5 +5,5 @@ jdk:
   
 build:
   ci:
-  - mvn clean test
+    - mvn clean test
   
