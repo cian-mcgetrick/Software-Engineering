@@ -5,15 +5,14 @@ import java.util.*;
 public class Module {
 	private String modName;
 	private String modID;
-	private List<String> students = new ArrayList<String>();
-	private List<String> modCourses = new ArrayList<String>();
+	private List<Student> students = new ArrayList<Student>();
+	private List<Course> modCourses = new ArrayList<Course>();
 	
 	
 	public Module(String modName, String modId) {
 		
 		this.modName = modName;
 		this.modID = modId;
-		
 		
 	}
 
@@ -38,26 +37,30 @@ public class Module {
 	}
 
 
-	public String getStudents() {
-		return students.toString();
+	public void getStudents() {
+		for(Student i:students) {
+			System.out.println(i.getUsername());
+		}
 	}
 
 
-	public void addStudents(String s) {
+	public void addStudents(Student s) {
 		students.add(s);
 	}
 
 
-	public String getModCourses() {
-		return modCourses.toString();
+	public void getCourse() {
+		for(Course i:modCourses) {
+			System.out.println(i.getCourseName());
+		}
 	}
 
 
-	public void addModCourses(String c) {
+	public void addModCourses(Course c) {
 		modCourses.add(c);
 	}
 
-
+	
 	
 
 }

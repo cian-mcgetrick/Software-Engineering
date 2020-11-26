@@ -8,11 +8,11 @@ public class Student {
 	private String dob;
 	private String username; 
 	private int id;
-	private String course;
-	private List<String> modules = new ArrayList<String>();
+	private Course course;
+	private List<Module> modules = new ArrayList<Module>();
 	
 	
-	public Student(String name, int age, String dob, int id, String course) {
+	public Student(String name, int age, String dob, int id, Course course) {
 		
 		this.Name = name;
 		this.age =  age; 
@@ -54,22 +54,28 @@ public class Student {
 		this.id = id;
 	}
 
-	public String getCourse() {
+	public Course getCourse() {
 		return course;
 	}
 
-	public void setCourse(String course) {
+	public void setCourse(Course course) {
 		this.course = course;
 	}
 
-	public List<String> getModules() {
-		return modules;
+	public void getModules() {
+		for(Module i:modules) {
+			System.out.println(i.getModName());
+		}
 	}
 
-	public void addModules(String m) {
+	public void addModules(Module m) {
 		modules.add(m);
 	}
 
-	
+	public String toString() {
+		
+		String s = this.getUsername() + " " + course.getCourseName();
+		return s;
+	}
 
 }

@@ -12,12 +12,12 @@ private String courseName;
 
 DateTime start = new  DateTime();
 DateTime end = new DateTime();
-private List<String> Modules = new ArrayList<>();
-private List<String> Students = new ArrayList<>();
+private List<Module> Modules = new ArrayList<>();
+private List<Student> Students = new ArrayList<>();
 
 
 //constructor
-Course (String courseName, String startDate, String endDate) {
+public Course (String courseName, String startDate, String endDate) {
 this.courseName = courseName;
 
 //DateTime using DateTimeFormatter
@@ -39,23 +39,27 @@ return courseName;
 
 
 //get method for module name
-public String getModuleList() {
-return Modules.toString();
+public void getModuleList() {
+	for(Module i:Modules) {
+		System.out.println(i.getModName());
+	}
 }
 
 
 //get method for list of students
-public String getStudentList() {
-return Modules.toString();
+public void getStudentList() {
+	for(Student i:Students) {
+		System.out.println(i.getUsername());
+	}
 }
 
 // add modules and students
 
-public void addStudent(String s) {
+public void addStudent(Student s) {
 	Students.add(s);
 }
 
-public void addModules(String m) {
+public void addModules(Module m) {
 	Modules.add(m);
 }
 //set and get methods for start date
